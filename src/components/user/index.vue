@@ -113,6 +113,7 @@ export default {
     },
     // 查询用户
     onSearch(){
+      this.loading = true;
       console.log("开始查询");
       this.$axios.post('/api/user/searchUser',{user_name: this.formInline.uname}).then((res) => {
         console.log(res.data);
